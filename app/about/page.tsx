@@ -19,7 +19,14 @@ const defaultTeamMembers = [
 
 export default async function AboutPage() {
   // Use default team members instead of trying to fetch from database
-  const defaultTeamMembers: TeamMember[] = []
+  cconst defaultTeamMembers: TeamMember[] = [
+  {
+    id: "1",
+    name: "Adithyan S",
+    position: "Founder & CEO",
+    image_url: null,
+  },
+]
 
 
   return (
