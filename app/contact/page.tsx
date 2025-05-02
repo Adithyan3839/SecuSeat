@@ -16,7 +16,7 @@ import { submitContactForm } from "../actions/contact"
 const DEFAULT_CONTACT_INFO = {
   email: "SecuSeat@gmail.com",
   phone: "+91 8592867698",
-  linkedin_url: "https://www.linkedin.com/in/secu-seat/,
+  linkedin_url: "https://www.linkedin.com/in/secu-seat/",
   instagram_url: "https://instagram.com/secu.seat",
 
   office_hours: "Monday - Friday: 9:00 AM - 6:00 PM IST\nSaturday - Sunday: Closed",
