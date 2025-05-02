@@ -23,7 +23,7 @@ const defaultTeamMembers: TeamMember[] = [
 
 export default async function AboutPage() {
   // Use default team members instead of trying to fetch from database
-  
+  const teamMembers = defaultTeamMembers;
 
 
   return (
