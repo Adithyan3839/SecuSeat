@@ -2,7 +2,44 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
-export default function AboutPage() {
+// Define the TeamMember type
+type TeamMember = {
+  id: string
+  name: string
+  position: string
+  bio: string | null
+  image_url: string | null
+}
+
+// Default team members to use when database isn't available
+const defaultTeamMembers = [
+  {
+    id: "1",
+    name: "Alex Thompson",
+    position: "Founder & CEO",
+    bio: "Alex founded SecuSeat after experiencing ticket fraud firsthand. With a background in blockchain technology and event management, he's passionate about creating a fair ticketing ecosystem.",
+    image_url: null,
+  },
+  {
+    id: "2",
+    name: "Maya Rodriguez",
+    position: "CTO",
+    bio: "Maya leads our technical team with over 10 years of experience in blockchain development. She previously worked at major tech companies before joining SecuSeat to revolutionize the ticketing industry.",
+    image_url: null,
+  },
+  {
+    id: "3",
+    name: "James Wilson",
+    position: "Head of Partnerships",
+    bio: "James brings extensive experience in the events industry, having worked with major festivals and venues worldwide. He's focused on building relationships with event organizers and venues.",
+    image_url: null,
+  },
+]
+
+export default async function AboutPage() {
+  // Use default team members instead of trying to fetch from database
+  const teamMembers = defaultTeamMembers
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
@@ -192,45 +229,22 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="mx-auto grid max-w-5xl grid-cols-1 md:grid-cols-3 gap-8 py-12">
-            <div className="flex flex-col items-center text-center space-y-4">
-              <Image
-                src="/placeholder.svg?height=200&width=200"
-                alt="Team Member"
-                width={150}
-                height={150}
-                className="rounded-full"
-              />
-              <div>
-                <h3 className="text-xl font-bold">Alex Thompson</h3>
-                <p className="text-muted-foreground">Founder & CEO</p>
+            {teamMembers.map((member) => (
+              <div key={member.id} className="flex flex-col items-center text-center space-y-4">
+                <Image
+                  src={member.image_url || "/placeholder.svg?height=200&width=200"}
+                  alt={member.name}
+                  width={150}
+                  height={150}
+                  className="rounded-full"
+                />
+                <div>
+                  <h3 className="text-xl font-bold">{member.name}</h3>
+                  <p className="text-muted-foreground">{member.position}</p>
+                  {member.bio && <p className="text-sm text-muted-foreground mt-2">{member.bio}</p>}
+                </div>
               </div>
-            </div>
-            <div className="flex flex-col items-center text-center space-y-4">
-              <Image
-                src="/placeholder.svg?height=200&width=200"
-                alt="Team Member"
-                width={150}
-                height={150}
-                className="rounded-full"
-              />
-              <div>
-                <h3 className="text-xl font-bold">Maya Rodriguez</h3>
-                <p className="text-muted-foreground">CTO</p>
-              </div>
-            </div>
-            <div className="flex flex-col items-center text-center space-y-4">
-              <Image
-                src="/placeholder.svg?height=200&width=200"
-                alt="Team Member"
-                width={150}
-                height={150}
-                className="rounded-full"
-              />
-              <div>
-                <h3 className="text-xl font-bold">James Wilson</h3>
-                <p className="text-muted-foreground">Head of Partnerships</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

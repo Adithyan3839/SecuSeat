@@ -9,7 +9,18 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { Linkedin, Instagram, Twitter, Mail, Phone, MapPin } from "lucide-react"
+import { Linkedin, Instagram, Twitter, Mail, Phone } from "lucide-react"
+import { submitContactForm } from "../actions/contact"
+
+// Default contact information
+const DEFAULT_CONTACT_INFO = {
+  email: "SecuSeat@gmail.com",
+  phone: "+91 8592867698",
+  linkedin_url: "https://linkedin.com/company/secuseat",
+  instagram_url: "https://instagram.com/secuseat",
+  twitter_url: "https://twitter.com/secuseat",
+  office_hours: "Monday - Friday: 9:00 AM - 6:00 PM PST\nSaturday - Sunday: Closed",
+}
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -27,22 +38,45 @@ export default function ContactPage() {
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      const formDataObj = new FormData()
+      formDataObj.append("name", formData.name)
+      formDataObj.append("email", formData.email)
+      formDataObj.append("subject", formData.subject)
+      formDataObj.append("message", formData.message)
+
+      const result = await submitContactForm(formDataObj)
+
+      if (result.success) {
+        setIsSubmitted(true)
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        })
+      } else {
+        alert(result.message)
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error)
+      alert("An error occurred. Please try again.")
+    } finally {
       setIsSubmitting(false)
-      setIsSubmitted(true)
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      })
-    }, 1500)
+    }
   }
+
+  // Use the default contact info
+  const contactEmail = DEFAULT_CONTACT_INFO.email
+  const contactPhone = DEFAULT_CONTACT_INFO.phone
+  const officeHours = DEFAULT_CONTACT_INFO.office_hours
+  const linkedinUrl = DEFAULT_CONTACT_INFO.linkedin_url
+  const instagramUrl = DEFAULT_CONTACT_INFO.instagram_url
+  const twitterUrl = DEFAULT_CONTACT_INFO.twitter_url
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -158,27 +192,14 @@ export default function ContactPage() {
                     <Mail className="h-5 w-5 text-primary mt-0.5" />
                     <div>
                       <h3 className="font-medium">Email</h3>
-                      <p className="text-muted-foreground">info@secuseat.com</p>
+                      <p className="text-muted-foreground">{contactEmail}</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
                     <Phone className="h-5 w-5 text-primary mt-0.5" />
                     <div>
                       <h3 className="font-medium">Phone</h3>
-                      <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <MapPin className="h-5 w-5 text-primary mt-0.5" />
-                    <div>
-                      <h3 className="font-medium">Address</h3>
-                      <p className="text-muted-foreground">
-                        123 Blockchain Way
-                        <br />
-                        San Francisco, CA 94103
-                        <br />
-                        United States
-                      </p>
+                      <p className="text-muted-foreground">{contactPhone}</p>
                     </div>
                   </div>
                 </div>
@@ -187,7 +208,7 @@ export default function ContactPage() {
                 <h2 className="text-2xl font-bold tracking-tighter mb-4">Connect With Us</h2>
                 <div className="flex space-x-4">
                   <Link
-                    href="https://linkedin.com"
+                    href={linkedinUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 rounded-full bg-muted hover:bg-muted/80"
@@ -196,7 +217,7 @@ export default function ContactPage() {
                     <span className="sr-only">LinkedIn</span>
                   </Link>
                   <Link
-                    href="https://instagram.com"
+                    href={instagramUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 rounded-full bg-muted hover:bg-muted/80"
@@ -205,7 +226,7 @@ export default function ContactPage() {
                     <span className="sr-only">Instagram</span>
                   </Link>
                   <Link
-                    href="https://twitter.com"
+                    href={twitterUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 rounded-full bg-muted hover:bg-muted/80"
@@ -217,11 +238,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <h2 className="text-2xl font-bold tracking-tighter mb-4">Office Hours</h2>
-                <p className="text-muted-foreground">
-                  Monday - Friday: 9:00 AM - 6:00 PM PST
-                  <br />
-                  Saturday - Sunday: Closed
-                </p>
+                <p className="text-muted-foreground whitespace-pre-line">{officeHours}</p>
               </div>
             </div>
           </div>
