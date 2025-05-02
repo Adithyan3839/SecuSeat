@@ -16,10 +16,10 @@ import { submitContactForm } from "../actions/contact"
 const DEFAULT_CONTACT_INFO = {
   email: "SecuSeat@gmail.com",
   phone: "+91 8592867698",
-  linkedin_url: "https://linkedin.com/company/secuseat",
-  instagram_url: "https://instagram.com/secuseat",
-  twitter_url: "https://twitter.com/secuseat",
-  office_hours: "Monday - Friday: 9:00 AM - 6:00 PM PST\nSaturday - Sunday: Closed",
+  linkedin_url: "https://www.linkedin.com/in/secu-seat/,
+  instagram_url: "https://instagram.com/secu.seat",
+
+  office_hours: "Monday - Friday: 9:00 AM - 6:00 PM IST\nSaturday - Sunday: Closed",
 }
 
 export default function ContactPage() {
@@ -76,7 +76,7 @@ export default function ContactPage() {
   const officeHours = DEFAULT_CONTACT_INFO.office_hours
   const linkedinUrl = DEFAULT_CONTACT_INFO.linkedin_url
   const instagramUrl = DEFAULT_CONTACT_INFO.instagram_url
-  const twitterUrl = DEFAULT_CONTACT_INFO.twitter_url
+ 
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -224,15 +224,6 @@ export default function ContactPage() {
                   >
                     <Instagram className="h-5 w-5" />
                     <span className="sr-only">Instagram</span>
-                  </Link>
-                  <Link
-                    href={twitterUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 rounded-full bg-muted hover:bg-muted/80"
-                  >
-                    <Twitter className="h-5 w-5" />
-                    <span className="sr-only">Twitter</span>
                   </Link>
                 </div>
               </div>

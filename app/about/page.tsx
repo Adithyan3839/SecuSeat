@@ -14,26 +14,7 @@ type TeamMember = {
 // Default team members to use when database isn't available
 const defaultTeamMembers = [
   {
-    id: "1",
-    name: "Alex Thompson",
-    position: "Founder & CEO",
-    bio: "Alex founded SecuSeat after experiencing ticket fraud firsthand. With a background in blockchain technology and event management, he's passionate about creating a fair ticketing ecosystem.",
-    image_url: null,
-  },
-  {
-    id: "2",
-    name: "Maya Rodriguez",
-    position: "CTO",
-    bio: "Maya leads our technical team with over 10 years of experience in blockchain development. She previously worked at major tech companies before joining SecuSeat to revolutionize the ticketing industry.",
-    image_url: null,
-  },
-  {
-    id: "3",
-    name: "James Wilson",
-    position: "Head of Partnerships",
-    bio: "James brings extensive experience in the events industry, having worked with major festivals and venues worldwide. He's focused on building relationships with event organizers and venues.",
-    image_url: null,
-  },
+    
 ]
 
 export default async function AboutPage() {
