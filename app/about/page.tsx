@@ -12,14 +12,7 @@ type TeamMember = {
 }
 
 // Default team members to use when database isn't available
-const defaultTeamMembers = [
-  {
-    
-]
-
-export default async function AboutPage() {
-  // Use default team members instead of trying to fetch from database
-  cconst defaultTeamMembers: TeamMember[] = [
+const defaultTeamMembers: TeamMember[] = [
   {
     id: "1",
     name: "Adithyan S",
@@ -27,6 +20,10 @@ export default async function AboutPage() {
     image_url: null,
   },
 ]
+
+export default async function AboutPage() {
+  // Use default team members instead of trying to fetch from database
+  
 
 
   return (
