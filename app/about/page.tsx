@@ -49,7 +49,7 @@ export default async function AboutPage() {
             <div className="space-y-4">
               <h2 className="text-3xl font-bold tracking-tighter">Our Story</h2>
               <p className="text-muted-foreground">
-                SecuSeat was born out of frustration. Our founder, Alex, had saved for months to see his favorite band
+                SecuSeat was born out of frustration. Our founder, Adithyan S, had saved for months to see his favorite band
                 perform live. After purchasing tickets from what seemed like a legitimate reseller, he arrived at the
                 venue only to discover his tickets were counterfeit. Thousands of fans face this same disappointment
                 every day.
@@ -60,7 +60,7 @@ export default async function AboutPage() {
                 authenticity while giving event organizers unprecedented control over their tickets.
               </p>
               <p className="text-muted-foreground">
-                Founded in 2023, SecuSeat has quickly grown from a simple idea to a revolutionary platform poised to
+                Founded in 2025, SecuSeat has quickly grown from a simple idea to a revolutionary platform poised to
                 transform the $30 billion global ticketing industry.
               </p>
             </div>
