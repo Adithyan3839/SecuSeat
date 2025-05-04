@@ -57,7 +57,7 @@ export default function ForOrganizersPage() {
             </div>
             <div className="mx-auto lg:ml-auto">
               <Image
-                src="/placeholder.svg?height=400&width=400"
+                src="https://i.ibb.co/GvpjVG6b/4.png?height=400&width=400"
                 alt="Event Organizer Benefits"
                 width={400}
                 height={400}

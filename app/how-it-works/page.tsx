@@ -44,7 +44,7 @@ export default function HowItWorksPage() {
             </div>
             <div className="mx-auto lg:ml-auto">
               <Image
-                src="/placeholder.svg?height=400&width=400"
+                src="https://i.ibb.co/JWLtff0s/3.png?height=400&width=400"
                 alt="Blockchain Ticketing"
                 width={400}
                 height={400}
