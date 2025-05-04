@@ -29,10 +29,10 @@ export default function HomePage() {
             </div>
             <div className="mx-auto lg:ml-auto">
               <Image
-                src="/placeholder.svg?height=400&width=400"
+                src="https://i.ibb.co/Jjb9chdw/1.png?height=500&width=600"
                 alt="SecuSeat Platform"
-                width={400}
-                height={400}
+                width={600}
+                height={500}
                 className="rounded-lg object-cover"
               />
             </div>
@@ -54,10 +54,10 @@ export default function HomePage() {
           </div>
           <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
             <Image
-              src="/placeholder.svg?height=400&width=400"
+              src="https://i.ibb.co/BVsFFrXK/2.png?height=640&width=640"
               alt="SecuSeat Vision"
-              width={400}
-              height={400}
+              width={640}
+              height={640}
               className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last"
             />
             <div className="flex flex-col justify-center space-y-4">
@@ -219,81 +219,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Testimonials</h2>
-              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Hear what our early adopters have to say about SecuSeat.
-              </p>
-            </div>
-          </div>
-          <div className="mx-auto grid max-w-5xl grid-cols-1 md:grid-cols-3 gap-8 py-12">
-            <Card>
-              <CardContent className="pt-6">
-                <div className="flex flex-col items-center space-y-4">
-                  <Image
-                    src="/placeholder.svg?height=100&width=100"
-                    alt="User Avatar"
-                    width={80}
-                    height={80}
-                    className="rounded-full"
-                  />
-                  <div className="space-y-2 text-center">
-                    <p className="text-muted-foreground italic">
-                      "SecuSeat has completely transformed how we handle ticket sales. No more worries about fraud!"
-                    </p>
-                    <h3 className="font-medium">Sarah Johnson</h3>
-                    <p className="text-sm text-muted-foreground">Event Organizer</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="pt-6">
-                <div className="flex flex-col items-center space-y-4">
-                  <Image
-                    src="/placeholder.svg?height=100&width=100"
-                    alt="User Avatar"
-                    width={80}
-                    height={80}
-                    className="rounded-full"
-                  />
-                  <div className="space-y-2 text-center">
-                    <p className="text-muted-foreground italic">
-                      "As a frequent concert-goer, I love the peace of mind knowing my ticket is 100% legitimate."
-                    </p>
-                    <h3 className="font-medium">Michael Chen</h3>
-                    <p className="text-sm text-muted-foreground">Music Fan</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="pt-6">
-                <div className="flex flex-col items-center space-y-4">
-                  <Image
-                    src="/placeholder.svg?height=100&width=100"
-                    alt="User Avatar"
-                    width={80}
-                    height={80}
-                    className="rounded-full"
-                  />
-                  <div className="space-y-2 text-center">
-                    <p className="text-muted-foreground italic">
-                      "The ability to earn royalties on secondary sales has been a game-changer for our venue."
-                    </p>
-                    <h3 className="font-medium">David Rodriguez</h3>
-                    <p className="text-sm text-muted-foreground">Venue Owner</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Early Access Section */}
       <section id="early-access" className="w-full py-12 md:py-24 lg:py-32 bg-navy text-white">

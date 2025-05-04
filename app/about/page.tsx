@@ -17,7 +17,7 @@ const defaultTeamMembers: TeamMember[] = [
     id: "1",
     name: "Adithyan S",
     position: "Founder & CEO",
-    image_url: "https://ibb.co/N6720KQz",
+    image_url: "https://i.ibb.co/XZVxntNT/Formation-Apps-1699284385892.png",
   },
 ]
 
@@ -66,7 +66,7 @@ export default async function AboutPage() {
             </div>
             <div className="mx-auto lg:ml-auto">
               <Image
-                src="/placeholder.svg?height=400&width=400"
+                src="https://i.ibb.co/WNNZfm7z/Chat-GPT-Image-May-5-2025-02-12-39-AM.png?height=400&width=400"
                 alt="SecuSeat Founder"
                 width={400}
                 height={400}
@@ -83,7 +83,7 @@ export default async function AboutPage() {
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             <div className="mx-auto lg:ml-auto order-2 lg:order-1">
               <Image
-                src="/placeholder.svg?height=400&width=400"
+                src="https://i.ibb.co/VcftvWZx/NFT.png?height=400&width=400"
                 alt="SecuSeat Vision"
                 width={400}
                 height={400}
