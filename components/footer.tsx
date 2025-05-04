@@ -53,11 +53,6 @@ export function Footer() {
             <h3 className="text-lg font-bold mb-4">Resources</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/blog" className="text-sm text-muted-foreground hover:text-foreground">
-                  Blog
-                </Link>
-              </li>
-              <li>
                 <Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground">
                   Contact
                 </Link>

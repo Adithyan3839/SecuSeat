@@ -40,11 +40,6 @@ export function MainNav() {
       active: pathname === "/for-organizers",
     },
     {
-      href: "/blog",
-      label: "Blog",
-      active: pathname === "/blog",
-    },
-    {
       href: "/contact",
       label: "Contact",
       active: pathname === "/contact",
