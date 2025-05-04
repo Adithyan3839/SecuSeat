@@ -17,7 +17,7 @@ const defaultTeamMembers: TeamMember[] = [
     id: "1",
     name: "Adithyan S",
     position: "Founder & CEO",
-    image_url: null,
+    image_url: "https://ibb.co/N6720KQz",
   },
 ]
 
