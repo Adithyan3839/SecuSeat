@@ -10,15 +10,15 @@ export function Footer() {
             <h3 className="text-lg font-bold">SecuSeat</h3>
             <p className="text-sm text-muted-foreground">NFT-based tickets. Verified ownership. No fraud.</p>
             <div className="flex space-x-4">
-              <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <Link href="https://linkedin.com/company/secuseat" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
-              <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <Link href="https://instagram.com/secuseat" target="_blank" rel="noopener noreferrer">
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
-              <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              <Link href="https://twitter.com/secuseat" target="_blank" rel="noopener noreferrer">
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </Link>
@@ -47,16 +47,16 @@ export function Footer() {
                   For Organizers
                 </Link>
               </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-lg font-bold mb-4">Resources</h3>
-            <ul className="space-y-2">
               <li>
                 <Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground">
                   Contact
                 </Link>
               </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-lg font-bold mb-4">Resources</h3>
+            <ul className="space-y-2">
               <li>
                 <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
                   Privacy Policy
@@ -65,6 +65,11 @@ export function Footer() {
               <li>
                 <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
                   Terms of Service
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-sm text-muted-foreground hover:text-foreground">
+                  FAQ
                 </Link>
               </li>
             </ul>

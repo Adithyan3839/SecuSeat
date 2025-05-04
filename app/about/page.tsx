@@ -17,14 +17,28 @@ const defaultTeamMembers: TeamMember[] = [
     id: "1",
     name: "Adithyan S",
     position: "Founder & CEO",
+    bio: "Passionate about blockchain technology and its potential to transform industries. Founded SecuSeat after experiencing ticket fraud firsthand.",
     image_url: "https://i.ibb.co/XZVxntNT/Formation-Apps-1699284385892.png",
+  },
+  {
+    id: "2",
+    name: "Maya Rodriguez",
+    position: "CTO",
+    bio: "Blockchain developer with 8+ years of experience. Previously led engineering teams at major tech companies.",
+    image_url: "/placeholder.svg?height=200&width=200",
+  },
+  {
+    id: "3",
+    name: "James Wilson",
+    position: "Head of Partnerships",
+    bio: "Former event organizer with extensive industry connections. Focused on bringing SecuSeat to major venues and events.",
+    image_url: "/placeholder.svg?height=200&width=200",
   },
 ]
 
-export default async function AboutPage() {
+export default function AboutPage() {
   // Use default team members instead of trying to fetch from database
-  const teamMembers = defaultTeamMembers;
-
+  const teamMembers = defaultTeamMembers
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -49,9 +63,9 @@ export default async function AboutPage() {
             <div className="space-y-4">
               <h2 className="text-3xl font-bold tracking-tighter">Our Story</h2>
               <p className="text-muted-foreground">
-                SecuSeat was born out of frustration. Our founder, Adithyan S, had saved for months to see his favorite band
-                perform live. After purchasing tickets from what seemed like a legitimate reseller, he arrived at the
-                venue only to discover his tickets were counterfeit. Thousands of fans face this same disappointment
+                SecuSeat was born out of frustration. Our founder, Adithyan S, had saved for months to see his favorite
+                band perform live. After purchasing tickets from what seemed like a legitimate reseller, he arrived at
+                the venue only to discover his tickets were counterfeit. Thousands of fans face this same disappointment
                 every day.
               </p>
               <p className="text-muted-foreground">
@@ -66,7 +80,7 @@ export default async function AboutPage() {
             </div>
             <div className="mx-auto lg:ml-auto">
               <Image
-                src="https://i.ibb.co/WNNZfm7z/Chat-GPT-Image-May-5-2025-02-12-39-AM.png?height=400&width=400"
+                src="https://i.ibb.co/WNNZfm7z/Chat-GPT-Image-May-5-2025-02-12-39-AM.png"
                 alt="SecuSeat Founder"
                 width={400}
                 height={400}
@@ -83,7 +97,7 @@ export default async function AboutPage() {
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             <div className="mx-auto lg:ml-auto order-2 lg:order-1">
               <Image
-                src="https://i.ibb.co/VcftvWZx/NFT.png?height=400&width=400"
+                src="https://i.ibb.co/VcftvWZx/NFT.png"
                 alt="SecuSeat Vision"
                 width={400}
                 height={400}
@@ -222,7 +236,7 @@ export default async function AboutPage() {
                   alt={member.name}
                   width={150}
                   height={150}
-                  className="rounded-full"
+                  className="rounded-full object-cover h-[150px] w-[150px]"
                 />
                 <div>
                   <h3 className="text-xl font-bold">{member.name}</h3>
