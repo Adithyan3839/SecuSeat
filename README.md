@@ -1,30 +1,35 @@
-# Secu seat website design
+# SecuSeat Website
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+## Email Setup for Contact Form
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/adithyans-projects-1b42ca90/v0-secu-seat-website-design)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/hh2Q5Qhvkb0)
+To enable email functionality for the contact form, you need to set up the following:
 
-## Overview
+1. Create a `.env.local` file in the root directory with the following variables:
+   \`\`\`
+   EMAIL_USER=secuseat@gmail.com
+   EMAIL_PASSWORD=your_app_password_here
+   \`\`\`
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+2. For the `EMAIL_PASSWORD`, you need to generate an "App Password" from your Google account:
+   - Go to your Google Account settings
+   - Navigate to Security
+   - Under "Signing in to Google," select "App passwords" (you may need to enable 2-Step Verification first)
+   - Select "Mail" as the app and "Other" as the device
+   - Enter "SecuSeat Website" as the name
+   - Google will generate an app password for you to use
 
-## Deployment
+3. Replace `your_app_password_here` in the `.env.local` file with the generated app password
 
-Your project is live at:
+4. Make sure to add the `.env.local` file to your `.gitignore` to keep your credentials secure
 
-**[https://vercel.com/adithyans-projects-1b42ca90/v0-secu-seat-website-design](https://vercel.com/adithyans-projects-1b42ca90/v0-secu-seat-website-design)**
+## Running the Website
 
-## Build your app
+\`\`\`bash
+# Install dependencies
+npm install
 
-Continue building your app on:
+# Run the development server
+npm run dev
+\`\`\`
 
-**[https://v0.dev/chat/projects/hh2Q5Qhvkb0](https://v0.dev/chat/projects/hh2Q5Qhvkb0)**
-
-## How It Works
-
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

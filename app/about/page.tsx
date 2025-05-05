@@ -20,20 +20,7 @@ const defaultTeamMembers: TeamMember[] = [
     bio: "Passionate about blockchain technology and its potential to transform industries. Founded SecuSeat after experiencing ticket fraud firsthand.",
     image_url: "https://i.ibb.co/XZVxntNT/Formation-Apps-1699284385892.png",
   },
-  {
-    id: "2",
-    name: "Maya Rodriguez",
-    position: "CTO",
-    bio: "Blockchain developer with 8+ years of experience. Previously led engineering teams at major tech companies.",
-    image_url: "/placeholder.svg?height=200&width=200",
-  },
-  {
-    id: "3",
-    name: "James Wilson",
-    position: "Head of Partnerships",
-    bio: "Former event organizer with extensive industry connections. Focused on bringing SecuSeat to major venues and events.",
-    image_url: "/placeholder.svg?height=200&width=200",
-  },
+ 
 ]
 
 export default function AboutPage() {

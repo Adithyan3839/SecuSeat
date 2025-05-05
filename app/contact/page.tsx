@@ -126,7 +126,10 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <h3 className="text-xl font-bold">Message Sent!</h3>
-                    <p className="text-muted-foreground">Thank you for reaching out. We'll get back to you shortly.</p>
+                    <p className="text-muted-foreground">
+                      Thank you for reaching out. Your message has been sent to our team at secuseat@gmail.com. We'll
+                      get back to you shortly.
+                    </p>
                     <Button onClick={() => setIsSubmitted(false)}>Send Another Message</Button>
                   </div>
                 ) : (
