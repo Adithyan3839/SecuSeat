@@ -20,7 +20,6 @@ const defaultTeamMembers: TeamMember[] = [
     bio: "Passionate about blockchain technology and its potential to transform industries. Founded SecuSeat after experiencing ticket fraud firsthand.",
     image_url: "https://i.ibb.co/XZVxntNT/Formation-Apps-1699284385892.png",
   },
- 
 ]
 
 export default function AboutPage() {
@@ -215,9 +214,9 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
-          <div className="mx-auto grid max-w-5xl grid-cols-1 md:grid-cols-3 gap-8 py-12">
+          <div className="mx-auto grid max-w-5xl grid-cols-1 md:grid-cols-3 gap-8 py-12 justify-items-center">
             {teamMembers.map((member) => (
-              <div key={member.id} className="flex flex-col items-center text-center space-y-4">
+              <div key={member.id} className="flex flex-col items-center text-center space-y-4 w-full max-w-xs mx-auto">
                 <Image
                   src={member.image_url || "/placeholder.svg?height=200&width=200"}
                   alt={member.name}
